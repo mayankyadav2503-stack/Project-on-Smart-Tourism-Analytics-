@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.env.*
+.venv/
+venv/
+ENV/
+
+# Streamlit
+.streamlit/*.py
+!/.streamlit/config.toml
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build / packaging
+dist/
+build/
+*.egg-info/
+
+# Database
+*.sqlite3
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Python test cache
+.pytest_cache/

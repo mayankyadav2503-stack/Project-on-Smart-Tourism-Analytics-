@@ -1,0 +1,15 @@
+[global]
+logLevel = "info"
+logger.level = "info"
+
+[client]
+showErrorDetails = true
+showWarningOnDirectoryDelete = false
+
+[logger]
+level = "info"
+
+[server]
+port = 8501
+headless = true
+runOnSave = true
