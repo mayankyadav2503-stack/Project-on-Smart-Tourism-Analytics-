@@ -30,10 +30,12 @@ def health():
 
 if __name__ == "__main__":
     is_streamlit = any("streamlit" in m.lower() for m in sys.modules) or "STREAMLIT_SCRIPT" in os.environ
-    if is_streamlit:
+    is_production = os.environ.get("FLASK_DEBUG", "1") == "0"
+    if is_streamlit and not is_production:
         print("[Hint] Run 'streamlit run streamlit_app.py' for the frontend, and 'python app.py' for the Flask API.")
     else:
+        debug = not is_production
         init_db()
         seed_database()
-        print("[Flask] Starting Smart Tourism Analytics Platform API on http://127.0.0.1:5000")
-        app.run(host="0.0.0.0", port=5000, debug=True)
+        print(f"[Flask] Starting API on http://127.0.0.1:5000 {'(production)' if is_production else '(debug)'}")
+        app.run(host="0.0.0.0", port=5000, debug=debug)

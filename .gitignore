@@ -35,6 +35,10 @@ build/
 # Logs
 *.log
 
+# Temp test scripts
+_test_*.py
+_test_*
+
 # Temporary files
 *.tmp
 *.temp
