@@ -17,7 +17,7 @@ class AppLauncher:
         self.flask_process = None
         self.script_dir = Path(__file__).parent.absolute()
     
-    def start_flask(self):
+    def start_flask(self
         """Start Flask backend as daemon"""
         if self.flask_process is None:
             try:
